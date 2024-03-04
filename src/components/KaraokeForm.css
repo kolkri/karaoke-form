@@ -1,0 +1,10 @@
+.Karaoke {
+  background: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.KaraokeForm {
+  display: flex;
+  flex-direction: column;
+}
