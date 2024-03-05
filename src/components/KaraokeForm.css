@@ -1,10 +1,131 @@
 .Karaoke {
-  background: grey;
   display: flex;
   flex-direction: column;
+  width: 250px;
+}
+
+.Karaoke h3 {
+  align-self: start;
+  font-weight: 400;
 }
 
 .KaraokeForm {
   display: flex;
   flex-direction: column;
+}
+
+.KaraokeForm button {
+  background: var(--main-green);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  width: fit-content;
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+
+.Karaoke input[type='text'],
+select {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* .Karaoke input[type='text']:active,
+.Karaoke select:active {
+  border-color: var(--main-green);
+} */
+
+.Karaoke label {
+  align-self: start;
+  padding-top: 10px;
+}
+
+/* Add this to your KaraokeForm.css file */
+.KaraokeForm input[type='radio'] {
+  display: none; /* Hide the actual radio buttons */
+}
+
+/* Add this to your KaraokeForm.css file */
+.KaraokeForm label.radio-label {
+  margin-top: 12px;
+  display: inline-block;
+  width: 48px; /* Adjust as needed */
+  height: 48px; /* Adjust as needed */
+  text-align: center;
+  line-height: 50px; /* Center the text vertically */
+  cursor: pointer;
+  border: 1px solid #ccc; /* Add border for better visualization */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* Remove pointer-events: none; */
+.KaraokeForm input[type='radio']:checked + .radio-label {
+  pointer-events: auto; /* Enable pointer events */
+}
+
+.KaraokeForm label.radio-label:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.KaraokeForm label.radio-label:nth-of-type(5) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.KaraokeForm input[type='radio']:checked + .radio-label {
+  background-color: var(--main-green); /* Change the background color when selected */
+  color: #fff; /* Change the text color when selected */
+}
+
+.dropzone {
+  width: 208px;
+  height: 50;
+  border: 1px dashed #ccc;
+  padding: 20px;
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+.dropzone p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.uploaded-image {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute; /* Position the image within the dropzone */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto; /* Center the image within the dropzone */
+}
+
+.checkboxText {
+  display: flex;
+  align-items: center;
+  font-size: 9px;
+}
+
+.labelStyle {
+  font-size: 12px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
 }
