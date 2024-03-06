@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.KaraokeForm button {
+button {
   background: var(--main-green);
   color: #ffffff;
   font-weight: 600;
@@ -64,7 +64,7 @@ select {
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
   font-size: 12px;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 /* Remove pointer-events: none; */
@@ -97,6 +97,7 @@ select {
   cursor: pointer;
   border-radius: 4px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .dropzone p {
@@ -105,6 +106,10 @@ select {
 }
 
 .uploaded-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
   max-width: 100%;
   max-height: 100%;
   position: absolute; /* Position the image within the dropzone */
@@ -113,6 +118,13 @@ select {
   bottom: 0;
   right: 0;
   margin: auto; /* Center the image within the dropzone */
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
 .checkboxText {
@@ -128,4 +140,29 @@ select {
 .error {
   color: red;
   font-size: 12px;
+}
+
+.checkboxDiv {
+  display: flex;
+  margin-top: 10px;
+}
+
+.checkboxDiv p {
+  font-size: 11px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.singerBox {
+}
+
+.result h3 p {
+  align-self: center;
+}
+
+.result p {
+  font-weight: 500;
 }
