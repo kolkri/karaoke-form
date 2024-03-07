@@ -157,12 +157,15 @@ const KaraokeForm = () => {
       {step === 1 && (
         <div className='result'>
           <h3>Seuraavana vuorossa:</h3>
-          <img src={URL.createObjectURL(uploadedFiles[0])} alt='Uploaded' className='profile-image' />
+          {uploadedFiles.length > 0 && <img src={URL.createObjectURL(uploadedFiles[0])} alt='Uploaded' className='profile-image' />}
           <p>{name}</p>
           <p>
             {KaraokeSongs.find(item => item.id === Number(song))?.name} - {KaraokeSongs.find(item => item.id === Number(song))?.artist}{' '}
           </p>
-          <button onClick={handleNewSong} aria-label='uusi biisi'>Uusi biisi</button>
+          <p>Sävellaji: {key}</p>
+          <button onClick={handleNewSong} aria-label='uusi biisi'>
+            Uusi biisi
+          </button>
         </div>
       )}
     </>
